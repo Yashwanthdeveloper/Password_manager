@@ -1,32 +1,60 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Hello, World</title>
-    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassX - Your Personal Password Manager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hello, World</h1>
-    <h2>Advertisement </h2>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5773565036138341"
-     crossorigin="anonymous"></script>
-<!-- New -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5773565036138341"
-     data-ad-slot="9821917683"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    <h2> AMP Ads</h2>
-    <amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-5773565036138341"
-     data-ad-slot="9821917683"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
+    <nav>
+        <div class="logo">PassX</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Password Manager</h1>
+        <p>We're thrilled to have you here. Your digital life contains a myriad of passwords, and we know how
+            challenging it can be to manage them all. That's why we're here to make it easy for you.</p>
+        <h2>Your Passwords <span id="alert">(Copied!)</span></h2> 
+        <table>
+            <tr>
+                <th>Website</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Delete</th>
+            </tr> 
+ 
+        </table>
+
+        <h2>Add a Password</h2>
+        <form action="/submit" method="post">
+
+            <!-- Text input for website -->
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website" required>
+            <br><br>
+
+            <!-- Text input for username -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+
+            <!-- Password input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <!-- Submit button -->
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
